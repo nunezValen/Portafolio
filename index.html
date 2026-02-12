@@ -167,6 +167,14 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
                         <div class="project-title">Bot de WhatsApp</div>
                         <div class="project-desc">Bot hecho con Twilio que, según la entrada de mensaje, devuelve un listado con propiedades que cumplen con lo pedido.</div>
                     </div>
+                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/ruby','_blank')">
+                        <div class="project-title">Ecommerce en Ruby on Rails</div>
+                        <div class="project-desc">Ecommerce realizado con Ruby on Rails. Permite agregar productos, categorías, usuarios y pedidos. También tiene un sistema de autenticación y autorización.</div>
+                    </div>
+                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/Trabajo-final-proyecto-de-software','_blank')">
+                        <div class="project-title">Trabajo final de Proyecto de Software</div>
+                        <div class="project-desc">Realizado con flask y vue. Consta de dos partes, parte publica y privada, ambas son una web pero la parte publica fue realizada en vue y la privada en flask, la parte publica llama a los endpoints creados en la parte privada para mostrar informacion</div>
+                    </div>
                 </div>
             </section>
     </main>
@@ -261,19 +269,25 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
         });
     }
 
+    function applyLanguage(lang) {
+        document.getElementById('main-title').textContent = translations[lang].mainTitle;
+        document.getElementById('about-title').textContent = translations[lang].aboutTitle;
+        document.getElementById('about-text').innerHTML = translations[lang].aboutText;
+        document.getElementById('projects-title').textContent = translations[lang].projectsTitle;
+        document.getElementById('projects-desc').textContent = translations[lang].projectsDesc;
+        document.getElementById('btn-proyectos').textContent = translations[lang].btnProyectos;
+        document.getElementById('btn-cv').textContent = translations[lang].btnCV;
+        document.getElementById('footer-text').textContent = translations[lang].footerText;
+        document.documentElement.lang = lang;
+        updateProjects(lang);
+    }
+
     document.getElementById('language-switch').onchange = function(e) {
-        const lang = e.target.value;
-    document.getElementById('main-title').textContent = translations[lang].mainTitle;
-    document.getElementById('about-title').textContent = translations[lang].aboutTitle;
-    document.getElementById('about-text').innerHTML = translations[lang].aboutText;
-    document.getElementById('projects-title').textContent = translations[lang].projectsTitle;
-    document.getElementById('projects-desc').textContent = translations[lang].projectsDesc;
-    document.getElementById('btn-proyectos').textContent = translations[lang].btnProyectos;
-    document.getElementById('btn-cv').textContent = translations[lang].btnCV;
-    document.getElementById('footer-text').textContent = translations[lang].footerText;
-    document.documentElement.lang = lang;
-    updateProjects(lang);
+        applyLanguage(e.target.value);
     };
+
+    // Aplicar idioma inicial al cargar (con <br> en "Sobre mí" para que se vea bien desde el inicio)
+    applyLanguage('es');
 
     // Filtrado de proyectos
     const filterBtns = document.querySelectorAll('.filter-btn');
