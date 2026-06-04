@@ -1,15 +1,14 @@
 <html>
 <head>
     <title>Valentín Nuñez</title>
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
     <header>
         <h1 id="main-title">Hola, soy Valentin</h1>
         <nav>
-            <button id="btn-proyectos">Ver trabajos</button>
-            <button id="btn-trabajos">Ver proyectos</button>
+            <button id="btn-trabajos">Ver trabajos</button>
+            <button id="btn-proyectos">Ver proyectos</button>
             <button id="btn-linkedin">LinkedIn</button>
             <button id="btn-cv">Ver CV</button>
             <select id="language-switch">
@@ -21,32 +20,13 @@
     <main>
         <section id="about">
             <h2 id="about-title">Sobre mí</h2>
-            <p id="about-text">Inglés B2
-Graduado del curso A.P(aprende programando) del gobierno. 
-Estudiante de Analista Programador Universitario y Licenciatura en Informática | Buscando Oportunidades en Desarrollo de Software
-
-Experiencia en lenguajes de programación como Java, Python, HTML, CSS, Pascal y Assembly, respaldada por una sólida comprensión de estructuras de datos y control. Destreza en el uso de GitHub para colaboración y gestión de proyectos. En búsqueda activa de oportunidades para adquirir experiencia laboral y aplicar conocimientos en un entorno profesional. También trabajé en la realización de webs utilizando Django
-
-Educación
-- Estudiante de Analista Programador Universitario y Licenciatura en Informática, Universidad Nacional de La Plata (UNLP) - Tercer año.
-
-Habilidades Clave
-- Lenguajes de Programación: Java, Python, HTML, CSS, Assembly,flutter,dart,bash,JavaScript.
-- Estructuras de Datos y Control.
-- Gestión de Proyectos en GitHub.
-
-Experiencia Académica y Proyectos
-- Proyectos académicos desarrollados durante el curso universitario, enfocados en la aplicación práctica de los conocimientos adquiridos en programación y desarrollo de software.
-
-Objetivo Profesional
-Buscar oportunidades para aplicar y desarrollar habilidades técnicas en un entorno laboral dinámico y desafiante, contribuyendo al crecimiento de proyectos innovadores.
-
-Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.</p>
+            <p id="about-text"></p>
         </section>
-        <section id="proyectos">
-            <h2 id="projects-title">Trabajos</h2>
+        
+        <section id="trabajos">
+            <h2 id="works-title">Trabajos</h2>
             <div id="project-filters" style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
-                <button class="filter-btn" data-tech="all">Todos</button>
+                <button class="filter-btn active" data-tech="all">Todos</button>
                 <button class="filter-btn" data-tech="html">HTML</button>
                 <button class="filter-btn" data-tech="css">CSS</button>
                 <button class="filter-btn" data-tech="javascript">JavaScript</button>
@@ -59,8 +39,10 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
                 <button class="filter-btn" data-tech="wix">Wix</button>
                 <button class="filter-btn" data-tech="bootstrap">Bootstrap</button>
             </div>
-            <div id="projects-list">
-                <p id="projects-desc">Estos son todos los trabajos realizados por mí. Haz clic en cada uno para visitar la página.</p>
+            
+            <p id="works-desc">Estos son todos los trabajos realizados por mí. Haz clic en cada uno para visitar la página.</p>
+            
+            <div id="works-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;">
                 <div class="project-card" onclick="window.open('https://checkprop.ar','_blank')">
                     <div class="project-title">Checkprop</div>
                     <div class="project-desc">Realizada en Wordpress. Web institucional para empresa de inmuebles.</div>
@@ -136,110 +118,100 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
                     <div class="project-desc">Realizada con Wordpress (Divi), PHP, HTML, CSS y JavaScript personalizado. Incluye plugin especial para afiliados y test vocacional con JavaScript y HTML. Web institucional y ecommerce para venta de cursos y gestión de afiliados.</div>
                     <div class="project-tags">Wordpress, Divi, PHP, HTML, CSS, JavaScript</div>
                 </div>
-
-                   <div class="project-card">
-    <div class="project-title">Sistema Inteligente para Veterinaria</div>
-    <div class="project-desc">
-        Sistema de gestión veterinaria con automatización de WhatsApp e Inteligencia Artificial.
-        Los clientes solicitan turnos mediante WhatsApp, la IA recopila la información necesaria,
-        agenda automáticamente la cita en el sistema y envía confirmaciones y recordatorios al cliente.
-    </div>
-    <div class="project-tags">Python, IA, WhatsApp API, Automatización</div>
-</div>
+                <div class="project-card">
+                    <div class="project-title">Sistema Inteligente para Veterinaria</div>
+                    <div class="project-desc">Sistema de gestión veterinaria con automatización de WhatsApp e Inteligencia Artificial. Los clientes solicitan turnos mediante WhatsApp, la IA recopila la información necesaria, agenda automáticamente la cita en el sistema y envía confirmaciones y recordatorios al cliente.</div>
+                    <div class="project-tags">Python, IA, WhatsApp API, Automatización</div>
+                </div>
             </div>
         </section>
-            <section id="trabajos">
-                <h2 id="projects-title">Proyectos</h2>
-                <div id="projects-list">
-                    <p id="projects-desc">Estos son todos los proyectos realizados por mí. Haz clic en cada uno para visitar la página.</p>
 
+        <section id="proyectos" style="margin-top: 3rem;">
+            <h2 id="projects-title">Proyectos</h2>
+            <p id="projects-desc">Estos son todos los proyectos realizados por mí. Haz clic en cada uno para visitar la página.</p>
+            
+            <div id="personal-projects-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;">
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Sistema-Peluqeuria','_blank')">
+                    <div class="project-title">Sistema de peluquería</div>
+                    <div class="project-desc">Sistema realizado con Python y Django para agendar turnos y verlos en un calendario. Con registro histórico por cliente.</div>
                 </div>
-            </section>
-            <section id="proyectos">
-                <div id="personal-projects-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;">
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/Sistema-Peluqeuria','_blank')">
-                        <div class="project-title">Sistema de peluquería</div>
-                        <div class="project-desc">Sistema realizado con Python y Django para agendar turnos y verlos en un calendario. Con registro histórico por cliente.</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/Alquil.Ar','_blank')">
-                        <div class="project-title">Alquil.ar</div>
-                        <div class="project-desc">Proyecto para la materia Ingeniería de Software 2, realizado con Django. Ecommerce de alquileres de maquinarias para construcción.</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/To-do-list-con-python','_blank')">
-                        <div class="project-title">Todo list en Python</div>
-                        <div class="project-desc">Aplicación para gestionar tareas realizada en Python.</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/Primera-app-celu','_blank')">
-                        <div class="project-title">App básica para celular</div>
-                        <div class="project-desc">Aplicación básica para celular realizada con Flutter.</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/bot','_blank')">
-                        <div class="project-title">Bot de WhatsApp</div>
-                        <div class="project-desc">Bot hecho con Twilio que, según la entrada de mensaje, devuelve un listado con propiedades que cumplen con lo pedido.</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/ruby','_blank')">
-                        <div class="project-title">Ecommerce en Ruby on Rails</div>
-                        <div class="project-desc">Ecommerce realizado con Ruby on Rails. Permite agregar productos, categorías, usuarios y pedidos. También tiene un sistema de autenticación y autorización.</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/Trabajo-final-proyecto-de-software','_blank')">
-                        <div class="project-title">Trabajo final de Proyecto de Software</div>
-                        <div class="project-desc">Realizado con flask y vue. Consta de dos partes, parte publica y privada, ambas son una web pero la parte publica fue realizada en vue y la privada en flask, la parte publica llama a los endpoints creados en la parte privada para mostrar informacion</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreDrop','_blank')">
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Alquil.Ar','_blank')">
+                    <div class="project-title">Alquil.ar</div>
+                    <div class="project-desc">Proyecto para la materia Ingeniería de Software 2, realizado con Django. Ecommerce de alquileres de maquinarias para construcción.</div>
+                </div>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/To-do-list-con-python','_blank')">
+                    <div class="project-title">Todo list en Python</div>
+                    <div class="project-desc">Aplicación para gestionar tareas realizada en Python.</div>
+                </div>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Primera-app-celu','_blank')">
+                    <div class="project-title">App básica para celular</div>
+                    <div class="project-desc">Aplicación básica para celular realizada con Flutter.</div>
+                </div>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/bot','_blank')">
+                    <div class="project-title">Bot de WhatsApp</div>
+                    <div class="project-desc">Bot hecho con Twilio que, según la entrada de mensaje, devuelve un listado con propiedades que cumplen con lo pedido.</div>
+                </div>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/ruby','_blank')">
+                    <div class="project-title">Ecommerce en Ruby on Rails</div>
+                    <div class="project-desc">Ecommerce realizado con Ruby on Rails. Permite agregar productos, categorías, usuarios y pedidos. También tiene un sistema de autenticación y autorización.</div>
+                </div>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Trabajo-final-proyecto-de-software','_blank')">
+                    <div class="project-title">Trabajo final de Proyecto de Software</div>
+                    <div class="project-desc">Realizado con flask y vue. Consta de dos partes, parte publica y privada, ambas son una web pero la parte publica fue realizada en vue y la privada en flask, la parte publica llama a los endpoints creados en la parte privada para mostrar informacion</div>
+                </div>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreDrop','_blank')">
                     <div class="project-title">LibreDrop</div>
-                    <div class="project-desc">
-                        Plataforma web para compartir y descargar archivos de forma sencilla. 
-                        Permite la gestión de archivos, carga y descarga de contenido, y una experiencia intuitiva para los usuarios.
-                    </div>
+                    <div class="project-desc">Plataforma web para compartir y descargar archivos de forma sencilla. Permite la gestión de archivos, carga y descarga de contenido, y una experiencia intuitiva para los usuarios.</div>
                     <div class="project-tags">Python, Django, HTML, CSS, JavaScript</div>
-                    </div>
-                    <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreShelves','_blank')">
-                    <div class="project-title">LibreShelves</div>
-                    <div class="project-desc">
-                        Sistema de gestión y organización de libros. Permite catalogar ejemplares,
-                        gestionar préstamos y administrar bibliotecas de forma eficiente.
-                    </div>
-                    <div class="project-tags">Python, Django, HTML, CSS, JavaScript</div>
-                    </div>
-
-                 
                 </div>
-            </section>
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreShelves','_blank')">
+                    <div class="project-title">LibreShelves</div>
+                    <div class="project-desc">Sistema de gestión y organización de libros. Permite catalogar ejemplares, gestionar préstamos y administrar bibliotecas de forma eficiente.</div>
+                    <div class="project-tags">Python, Django, HTML, CSS, JavaScript</div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p id="footer-text">© 2025 Valentin. Todos los derechos reservados.</p>
     </footer>
 
     <script>
-    // Scroll a la sección de proyectos
-    document.getElementById('btn-proyectos').onclick = function() {
-        document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' });
-    };
-    // Scroll a la sección de trabajos
+    // Scroll a las secciones
     document.getElementById('btn-trabajos').onclick = function() {
         document.getElementById('trabajos').scrollIntoView({ behavior: 'smooth' });
     };
+    
+    document.getElementById('btn-proyectos').onclick = function() {
+        document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' });
+    };
+
     // Ir a la página de CV
     document.getElementById('btn-cv').onclick = function() {
         window.location.href = 'cv.html';
     };
+    
     // Ir a LinkedIn
     document.getElementById('btn-linkedin').onclick = function() {
         window.open('https://www.linkedin.com/in/valentin-ezequiel-nuñez-8009a726b', '_blank');
     };
 
-    // Traducciones
+    // Traducciones unificadas (incluyendo todos los trabajos y proyectos en orden)
     const translations = {
         es: {
             mainTitle: 'Hola, soy Valentin',
             aboutTitle: 'Sobre mí',
             aboutText: 'Inglés B2<br>Graduado del curso A.P(aprende programando) del gobierno.<br>Estudiante de Analista Programador Universitario y Licenciatura en Informática | Buscando Oportunidades en Desarrollo de Software<br><br>Experiencia en lenguajes de programación como Java, Python, HTML, CSS, Pascal y Assembly, respaldada por una sólida comprensión de estructuras de datos y control. Destreza en el uso de GitHub para colaboración y gestión de proyectos. En búsqueda activa de oportunidades para adquirir experiencia laboral y aplicar conocimientos en un entorno profesional. También trabajé en la realización de webs utilizando Django<br><br><b>Educación</b><br>- Estudiante de Analista Programador Universitario y Licenciatura en Informática, Universidad Nacional de La Plata (UNLP) - Tercer año.<br><br><b>Habilidades Clave</b><br>- Lenguajes de Programación: Java, Python, HTML, CSS, Assembly, flutter, dart, bash, JavaScript.<br>- Estructuras de Datos y Control.<br>- Gestión de Proyectos en GitHub.<br><br><b>Experiencia Académica y Proyectos</b><br>- Proyectos académicos desarrollados durante el curso universitario, enfocados en la aplicación práctica de los conocimientos adquiridos en programación y desarrollo de software.<br><br><b>Objetivo Profesional</b><br>Buscar oportunidades para aplicar y desarrollar habilidades técnicas en un entorno laboral dinámico y desafiante, contribuyendo al crecimiento de proyectos innovadores.<br><br>Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.',
-            projectsTitle: 'Trabajos',
-            projectsDesc: 'Estos son todos los trabajos realizados por mí. Haz clic en cada uno para visitar la página.',
-            btnProyectos: 'Ver trabajos',
+            worksTitle: 'Trabajos',
+            worksDesc: 'Estos son todos los trabajos realizados por mí. Haz clic en cada uno para visitar la página.',
+            projectsTitle: 'Proyectos',
+            projectsDesc: 'Estos son todos los proyectos personales realizados por mí. Haz clic en cada uno para visitar el repositorio.',
+            btnTrabajos: 'Ver trabajos',
+            btnProyectos: 'Ver proyectos',
             btnCV: 'Ver CV',
             footerText: '© 2025 Valentin. Todos los derechos reservados.',
-            projects: [
+            allCards: [
+                // Trabajos
                 {title: 'Checkprop', desc: 'Realizada en Wordpress. Web institucional para empresa de inmuebles.'},
                 {title: 'Nova Propiedades', desc: 'Web institucional para empresa de inmuebles. Con integración de API para el valor del dólar actualizado cada 15 minutos.'},
                 {title: 'Matchprop', desc: 'Realizada en Wordpress, con integración API mediante PHP. Web institucional para empresa de inmuebles con conexión API de gvamax para mostrar propiedades en formato ecommerce.'},
@@ -254,19 +226,34 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
                 {title: 'En ronda', desc: 'Realizada con Wordpress (Divi). Web institucional para jardín maternal.'},
                 {title: 'Balon', desc: 'Realizada con Wordpress. Web institucional para alquiler de canchas de todo tipo estadounidense.'},
                 {title: 'Iron Planning', desc: 'Realizada con Wordpress y WooCommerce. Ecommerce y web institucional para la venta de parrillas.'},
-                {title: 'ICDP', desc: 'Realizada con Wordpress (Divi), PHP, HTML, CSS y JavaScript personalizado. Incluye plugin especial para afiliados y test vocacional con JavaScript y HTML. Web institucional y ecommerce para venta de cursos y gestión de afiliados.'}
+                {title: 'ICDP', desc: 'Realizada con Wordpress (Divi), PHP, HTML, CSS y JavaScript personalizado. Incluye plugin especial para afiliados y test vocacional con JavaScript y HTML. Web institucional y ecommerce para venta de cursos y gestión de afiliados.'},
+                {title: 'Sistema Inteligente para Veterinaria', desc: 'Sistema de gestión veterinaria con automatización de WhatsApp e Inteligencia Artificial. Los clientes solicitan turnos mediante WhatsApp, la IA recopila la información necesaria, agenda automáticamente la cita en el sistema y envía confirmaciones y recordatorios al cliente.'},
+                // Proyectos Personales
+                {title: 'Sistema de peluquería', desc: 'Sistema realizado con Python y Django para agendar turnos y verlos en un calendario. Con registro histórico por cliente.'},
+                {title: 'Alquil.ar', desc: 'Proyecto para la materia Ingeniería de Software 2, realizado con Django. Ecommerce de alquileres de maquinarias para construcción.'},
+                {title: 'Todo list en Python', desc: 'Aplicación para gestionar tareas realizada en Python.'},
+                {title: 'App básica para celular', desc: 'Aplicación básica para celular realizada con Flutter.'},
+                {title: 'Bot de WhatsApp', desc: 'Bot hecho con Twilio que, según la entrada de mensaje, devuelve un listado con propiedades que cumplen con lo pedido.'},
+                {title: 'Ecommerce en Ruby on Rails', desc: 'Ecommerce realizado con Ruby on Rails. Permite agregar productos, categorías, usuarios y pedidos. También tiene un sistema de autenticación y autorización.'},
+                {title: 'Trabajo final de Proyecto de Software', desc: 'Realizado con flask y vue. Consta de dos partes, parte publica y privada, ambas son una web pero la parte publica fue realizada en vue y la privada en flask, la parte publica llama a los endpoints creados en la parte privada para mostrar informacion'},
+                {title: 'LibreDrop', desc: 'Plataforma web para compartir y descargar archivos de forma sencilla. Permite la gestión de archivos, carga y descarga de contenido, y una experiencia intuitiva para los usuarios.'},
+                {title: 'LibreShelves', desc: 'Sistema de gestión y organización de libros. Permite catalogar ejemplares, gestionar préstamos y administrar bibliotecas de forma eficiente.'}
             ]
         },
         en: {
             mainTitle: 'Hi, I am Valentin',
             aboutTitle: 'About me',
             aboutText: 'English B2<br>Graduate of the A.P (Aprende Programando) course by the government.<br>Student of University Programming Analyst and Bachelor of Informatics | Seeking Opportunities in Software Development<br><br>Experience in programming languages such as Java, Python, HTML, CSS, Pascal and Assembly, backed by a solid understanding of data structures and control. Skilled in using GitHub for collaboration and project management. Actively seeking opportunities to gain work experience and apply knowledge in a professional environment. Also worked on web development using Django<br><br><b>Education</b><br>- Student of University Programming Analyst and Bachelor of Informatics, National University of La Plata (UNLP) - Third year.<br><br><b>Key Skills</b><br>- Programming Languages: Java, Python, HTML, CSS, Assembly, flutter, dart, bash, JavaScript.<br>- Data Structures and Control.<br>- Project Management in GitHub.<br><br><b>Academic Experience and Projects</b><br>- Academic projects developed during the university course, focused on the practical application of acquired knowledge in programming and software development.<br><br><b>Professional Objective</b><br>Seeking opportunities to apply and develop technical skills in a dynamic and challenging work environment, contributing to the growth of innovative projects.<br><br>Currently working in web development with tools like Divi and WordPress.',
-            projectsTitle: 'Works',
-            projectsDesc: 'These are all the works I have done. Click each one to visit the page.',
-            btnProyectos: 'See works',
+            worksTitle: 'Works',
+            worksDesc: 'These are all the works I have done. Click each one to visit the page.',
+            projectsTitle: 'Projects',
+            projectsDesc: 'These are all my personal projects. Click each one to visit the repository.',
+            btnTrabajos: 'See works',
+            btnProyectos: 'See projects',
             btnCV: 'See CV',
             footerText: '© 2025 Valentin. All rights reserved.',
-            projects: [
+            allCards: [
+                // Works
                 {title: 'Checkprop', desc: 'Made in Wordpress. Institutional website for a real estate company.'},
                 {title: 'Nova Propiedades', desc: 'Institutional website for a real estate company. With API integration for the dollar value updated every 15 minutes.'},
                 {title: 'Matchprop', desc: 'Made in Wordpress, with API integration via PHP. Institutional website for a real estate company with gvamax API connection to display properties in ecommerce format.'},
@@ -281,30 +268,33 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
                 {title: 'En ronda', desc: 'Made with Wordpress (Divi). Institutional website for a kindergarten.'},
                 {title: 'Balon', desc: 'Made with Wordpress. Institutional website for renting all types of sports fields in the US.'},
                 {title: 'Iron Planning', desc: 'Made with Wordpress and WooCommerce. Ecommerce and institutional website for grill sales.'},
-                {title: 'ICDP', desc: 'Made with Wordpress (Divi), PHP, HTML, CSS and custom JavaScript. Includes special plugin for affiliates and vocational test with JavaScript and HTML. Institutional website and ecommerce for course sales and affiliate management.'}
-                {
-    title: 'LibreDrop',
-    desc: 'Web platform for easy file sharing and downloading. Allows file management, content uploads and downloads, and provides an intuitive user experience.'
-},
-                {
-    title: 'LibreShelves',
-    desc: 'Book management and organization system. Allows cataloging books, managing loans, and efficiently administering library collections.'
-},
-                {
-    title: 'AI Veterinary Management System',
-    desc: 'Veterinary management system with WhatsApp automation and Artificial Intelligence. Clients schedule appointments through WhatsApp, the AI collects the required information, automatically registers the appointment in the system, and sends confirmations and reminders.'
-}
+                {title: 'ICDP', desc: 'Made with Wordpress (Divi), PHP, HTML, CSS and custom JavaScript. Includes special plugin for affiliates and vocational test with JavaScript and HTML. Institutional website and ecommerce for course sales and affiliate management.'},
+                {title: 'AI Veterinary Management System', desc: 'Veterinary management system with WhatsApp automation and Artificial Intelligence. Clients schedule appointments through WhatsApp, the AI collects the required information, automatically registers the appointment in the system, and sends confirmations and reminders.'},
+                // Personal Projects
+                {title: 'Hair salon system', desc: 'System made with Python and Django to schedule appointments and view them on a calendar. With historical records per client.'},
+                {title: 'Alquil.ar', desc: 'Project for the Software Engineering 2 subject, made with Django. Ecommerce for construction machinery rentals.'},
+                {title: 'To-do list in Python', desc: 'Application to manage tasks made in Python.'},
+                {title: 'Basic mobile app', desc: 'Basic mobile application made with Flutter.'},
+                {title: 'WhatsApp Bot', desc: 'Bot made with Twilio that, depending on the message input, returns a list of properties that meet the request.'},
+                {title: 'Ruby on Rails Ecommerce', desc: 'Ecommerce made with Ruby on Rails. Allows adding products, categories, users, and orders. Also has an authentication and authorization system.'},
+                {title: 'Software Project Final Work', desc: 'Made with Flask and Vue. Consists of public and private parts; the public part was made in Vue and the private in Flask. The public part calls endpoints created in the private part to show information.'},
+                {title: 'LibreDrop', desc: 'Web platform for easy file sharing and downloading. Allows file management, content uploads and downloads, and provides an intuitive user experience.'},
+                {title: 'LibreShelves', desc: 'Book management and organization system. Allows cataloging books, managing loans, and efficiently administering library collections.'}
             ]
         }
     };
 
     function updateProjects(lang) {
-        const cards = document.querySelectorAll('#projects-list .project-card');
-        const data = translations[lang].projects;
+        // Seleccionamos absolutamente todas las tarjetas en la página
+        const cards = document.querySelectorAll('.project-card');
+        const data = translations[lang].allCards;
+        
         cards.forEach((card, i) => {
             if (data[i]) {
-                card.querySelector('.project-title').textContent = data[i].title;
-                card.querySelector('.project-desc').textContent = data[i].desc;
+                const titleEl = card.querySelector('.project-title');
+                const descEl = card.querySelector('.project-desc');
+                if (titleEl) titleEl.textContent = data[i].title;
+                if (descEl) descEl.textContent = data[i].desc;
             }
         });
     }
@@ -313,11 +303,18 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
         document.getElementById('main-title').textContent = translations[lang].mainTitle;
         document.getElementById('about-title').textContent = translations[lang].aboutTitle;
         document.getElementById('about-text').innerHTML = translations[lang].aboutText;
+        
+        document.getElementById('works-title').textContent = translations[lang].worksTitle;
+        document.getElementById('works-desc').textContent = translations[lang].worksDesc;
+        
         document.getElementById('projects-title').textContent = translations[lang].projectsTitle;
         document.getElementById('projects-desc').textContent = translations[lang].projectsDesc;
+        
+        document.getElementById('btn-trabajos').textContent = translations[lang].btnTrabajos;
         document.getElementById('btn-proyectos').textContent = translations[lang].btnProyectos;
         document.getElementById('btn-cv').textContent = translations[lang].btnCV;
         document.getElementById('footer-text').textContent = translations[lang].footerText;
+        
         document.documentElement.lang = lang;
         updateProjects(lang);
     }
@@ -326,16 +323,16 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
         applyLanguage(e.target.value);
     };
 
-    // Aplicar idioma inicial al cargar (con <br> en "Sobre mí" para que se vea bien desde el inicio)
+    // Carga inicial del idioma
     applyLanguage('es');
 
-    // Filtrado de proyectos
+    // Filtrado de proyectos en la sección "Trabajos"
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.onclick = function() {
             const tech = btn.getAttribute('data-tech');
-            // Solo filtra los trabajos (cards dentro de #projects-list)
-            const cards = document.querySelectorAll('#projects-list .project-card');
+            const cards = document.querySelectorAll('#works-list .project-card');
+            
             cards.forEach(card => {
                 if (tech === 'all') {
                     card.style.display = '';
@@ -344,11 +341,11 @@ Actualmente trabajando en desarrollo web con herramientas como divi y WordPress.
                     card.style.display = tags.includes(tech) ? '' : 'none';
                 }
             });
+            
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
         };
     });
     </script>
-
 </body>
 </html>
