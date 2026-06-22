@@ -1,31 +1,115 @@
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Valentín Nuñez, estudiante de Informática y Desarrollador de Software.">
     <title>Valentín Nuñez</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1 id="main-title">Hola, soy Valentin</h1>
-        <nav>
-            <button id="btn-trabajos">Ver trabajos</button>
-            <button id="btn-proyectos">Ver proyectos</button>
-            <button id="btn-linkedin">LinkedIn</button>
-            <button id="btn-cv">Ver CV</button>
-            <select id="language-switch">
-                <option value="es">Español</option>
-                <option value="en">English</option>
-            </select>
-        </nav>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">Valentin</a>
+        
+        <!-- Toggle button for mobile -->
+        <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="nav-container" id="nav-container">
+            <div class="nav-menu">
+                <a class="nav-link" id="btn-about-nav">Sobre mí</a>
+                <a class="nav-link" id="btn-trabajos-nav">Trabajos</a>
+                <a class="nav-link" id="btn-proyectos-nav">Proyectos</a>
+                <a class="nav-link" id="btn-cv">CV</a>
+            </div>
+            <div class="nav-actions">
+                <a href="https://www.linkedin.com/in/valentin-ezequiel-nu%C3%B1ez-8009a726b" target="_blank" class="btn-secondary" id="btn-linkedin">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                    <span>LinkedIn</span>
+                </a>
+                <select id="language-switch" class="lang-switch">
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content animate-in">
+            <span class="hero-badge">Disponible para Trabajar</span>
+            <h1 class="hero-title-main" id="main-title">Hola, soy Valentin</h1>
+            <p class="hero-subtitle">Estudiante de Informática & Desarrollador de Software Full Stack enfocado en crear soluciones robustas, automatizaciones inteligentes y experiencias web de alta calidad.</p>
+            <div class="hero-cta">
+                <button class="btn-primary" id="btn-trabajos">Ver trabajos</button>
+                <button class="btn-secondary" id="btn-proyectos">Ver proyectos</button>
+            </div>
+        </div>
+        <div class="hero-image-container animate-in">
+            <div class="hero-image-deco"></div>
+            <div class="sphere-3d"></div>
+        </div>
     </header>
+
+    <!-- Main Content Area -->
     <main>
-        <section id="about">
-            <h2 id="about-title">Sobre mí</h2>
-            <p id="about-text"></p>
+        
+        <!-- About Me Section -->
+        <section id="about" class="animate-in">
+            <div class="section-header">
+                <span class="section-tag">// Introducción</span>
+                <h2 class="section-title" id="about-title">Sobre mí</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-bio" id="about-text">
+                    <!-- Loaded dynamically via javascript -->
+                </div>
+                
+                <div class="about-stats-card">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Proyectos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3°</span>
+                            <span class="stat-label">Año UNLP</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="skills-title">Educación Académica</h3>
+                    <div class="education-item">
+                        <div class="edu-year">2023 - Presente</div>
+                        <div class="edu-title">Analista Programador Universitario y Lic. en Informática</div>
+                        <div class="edu-school">Universidad Nacional de La Plata (UNLP)</div>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="edu-year">Gobierno de la Ciudad</div>
+                        <div class="edu-title">Graduado del Curso Aprende Programando</div>
+                        <div class="edu-school">Formación Técnico Profesional</div>
+                    </div>
+                </div>
+            </div>
         </section>
         
-        <section id="trabajos">
-            <h2 id="works-title">Trabajos</h2>
-            <div id="project-filters" style="margin-bottom:1.5rem; display:flex; flex-wrap:wrap; gap:0.5rem;">
+        <!-- Works (Trabajos) Section -->
+        <section id="trabajos" class="animate-in">
+            <div class="section-header">
+                <span class="section-tag">// Trayectoria Laboral</span>
+                <h2 class="section-title" id="works-title">Trabajos</h2>
+                <p class="section-desc" id="works-desc">Estos son todos los trabajos realizados por mí. Haz clic en cada uno para visitar la página.</p>
+            </div>
+
+            <!-- Filters list -->
+            <div class="project-filters" id="project-filters">
                 <button class="filter-btn active" data-tech="all">Todos</button>
                 <button class="filter-btn" data-tech="html">HTML</button>
                 <button class="filter-btn" data-tech="css">CSS</button>
@@ -40,144 +124,406 @@
                 <button class="filter-btn" data-tech="bootstrap">Bootstrap</button>
             </div>
             
-            <p id="works-desc">Estos son todos los trabajos realizados por mí. Haz clic en cada uno para visitar la página.</p>
-            
-            <div id="works-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;">
+            <!-- Cards list -->
+            <div class="grid-cards" id="works-list">
+                
+                <!-- Card 1 -->
                 <div class="project-card" onclick="window.open('https://checkprop.ar','_blank')">
-                    <div class="project-title">Checkprop</div>
-                    <div class="project-desc">Realizada en Wordpress. Web institucional para empresa de inmuebles.</div>
-                    <div class="project-tags">Wordpress</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Checkprop</h3>
+                        <p class="project-desc">Realizada en Wordpress. Web institucional para empresa de inmuebles.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span></div>
                 </div>
+
+                <!-- Card 2 -->
                 <div class="project-card" onclick="window.open('https://novapropiedades.ar','_blank')">
-                    <div class="project-title">Nova Propiedades</div>
-                    <div class="project-desc">Web institucional para empresa de inmuebles. Con integración de API para el valor del dólar actualizado cada 15 minutos.</div>
-                    <div class="project-tags">Wordpress, PHP</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Nova Propiedades</h3>
+                        <p class="project-desc">Web institucional para empresa de inmuebles. Con integración de API para el valor del dólar actualizado cada 15 minutos.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>PHP</span></div>
                 </div>
+
+                <!-- Card 3 -->
                 <div class="project-card" onclick="window.open('https://matchprop.com.ar','_blank')">
-                    <div class="project-title">Matchprop</div>
-                    <div class="project-desc">Realizada en Wordpress, con integración API mediante PHP. Web institucional para empresa de inmuebles con conexión API de gvamax para mostrar propiedades en formato ecommerce.</div>
-                    <div class="project-tags">Wordpress, PHP</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Matchprop</h3>
+                        <p class="project-desc">Realizada en Wordpress, con integración API mediante PHP. Web institucional para empresa de inmuebles con conexión API de gvamax para mostrar propiedades en formato ecommerce.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>PHP</span></div>
                 </div>
+
+                <!-- Card 4 -->
                 <div class="project-card" onclick="window.open('https://klonal.online','_blank')">
-                    <div class="project-title">Klonal</div>
-                    <div class="project-desc">Realizada en Wordpress. Web institucional para empresa farmacéutica.</div>
-                    <div class="project-tags">Wordpress</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Klonal</h3>
+                        <p class="project-desc">Realizada en Wordpress. Web institucional para empresa farmacéutica.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span></div>
                 </div>
+
+                <!-- Card 5 -->
                 <div class="project-card" onclick="window.open('https://solvaproyectos.com.ar','_blank')">
-                    <div class="project-title">Solva</div>
-                    <div class="project-desc">Realizada en Wordpress. Web institucional para empresa busca talentos.</div>
-                    <div class="project-tags">Wordpress</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Solva</h3>
+                        <p class="project-desc">Realizada en Wordpress. Web institucional para empresa busca talentos.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span></div>
                 </div>
+
+                <!-- Card 6 -->
                 <div class="project-card">
-                    <div class="project-title">DLG</div>
-                    <div class="project-desc">Realizada con Django. Web de gestión para empresa transportista marítima.</div>
-                    <div class="project-tags">Django, Python</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3 class="project-title">DLG</h3>
+                        <p class="project-desc">Realizada con Django. Web de gestión para empresa transportista marítima.</p>
+                    </div>
+                    <div class="project-tags"><span>Django</span>, <span>Python</span></div>
                 </div>
+
+                <!-- Card 7 -->
                 <div class="project-card">
-                    <div class="project-title">Tupuaj</div>
-                    <div class="project-desc">Realizada en Wix. Landing page para empresa IT israelí.</div>
-                    <div class="project-tags">Wix</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                        </div>
+                        <h3 class="project-title">Tupuaj</h3>
+                        <p class="project-desc">Realizada en Wix. Landing page para empresa IT israelí.</p>
+                    </div>
+                    <div class="project-tags"><span>Wix</span></div>
                 </div>
+
+                <!-- Card 8 -->
                 <div class="project-card" onclick="window.open('https://webodigital.com.ar/','_blank')">
-                    <div class="project-title">WEBo</div>
-                    <div class="project-desc">Web institucional realizada con HTML y Bootstrap.</div>
-                    <div class="project-tags">HTML, Bootstrap, CSS</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">WEBo</h3>
+                        <p class="project-desc">Web institucional realizada con HTML y Bootstrap.</p>
+                    </div>
+                    <div class="project-tags"><span>HTML</span>, <span>Bootstrap</span>, <span>CSS</span></div>
                 </div>
+
+                <!-- Card 9 -->
                 <div class="project-card" onclick="window.open('https://nicetoclub.com','_blank')">
-                    <div class="project-title">Niceto</div>
-                    <div class="project-desc">Realizada en Wordpress, con HTML, CSS y JavaScript personalizado para adaptarse a las necesidades del cliente. Web institucional para famoso bar de Buenos Aires.</div>
-                    <div class="project-tags">Wordpress, HTML, CSS, JavaScript</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Niceto</h3>
+                        <p class="project-desc">Realizada en Wordpress, con HTML, CSS y JavaScript personalizado para adaptarse a las necesidades del cliente. Web institucional para famoso bar de Buenos Aires.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span></div>
                 </div>
+
+                <!-- Card 10 -->
                 <div class="project-card" onclick="window.open('https://yoav-kigel.co.il','_blank')">
-                    <div class="project-title">Yoav-kigel</div>
-                    <div class="project-desc">Realizada con Wordpress (Elementor) y el plugin Sensei. Mi parte fue realizar la sección de venta de cursos online.</div>
-                    <div class="project-tags">Wordpress, Elementor, Sensei</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Yoav-kigel</h3>
+                        <p class="project-desc">Realizada con Wordpress (Elementor) y el plugin Sensei. Mi parte fue realizar la sección de venta de cursos online.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>Elementor</span>, <span>Sensei</span></div>
                 </div>
+
+                <!-- Card 11 -->
                 <div class="project-card" onclick="window.open('https://oralacademy360.com','_blank')">
-                    <div class="project-title">Oral Academy 360</div>
-                    <div class="project-desc">Realizada con Wordpress (Divi) y el plugin Sensei. Web institucional e instituto online de dentistas.</div>
-                    <div class="project-tags">Wordpress, Divi, Sensei</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Oral Academy 360</h3>
+                        <p class="project-desc">Realizada con Wordpress (Divi) y el plugin Sensei. Web institucional e instituto online de dentistas.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>Divi</span>, <span>Sensei</span></div>
                 </div>
+
+                <!-- Card 12 -->
                 <div class="project-card" onclick="window.open('https://enronda.com.ar','_blank')">
-                    <div class="project-title">En ronda</div>
-                    <div class="project-desc">Realizada con Wordpress (Divi). Web institucional para jardín maternal.</div>
-                    <div class="project-tags">Wordpress, Divi</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">En ronda</h3>
+                        <p class="project-desc">Realizada con Wordpress (Divi). Web institucional para jardín maternal.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>Divi</span></div>
                 </div>
+
+                <!-- Card 13 -->
                 <div class="project-card" onclick="window.open('https://balondevelopers.com','_blank')">
-                    <div class="project-title">Balon</div>
-                    <div class="project-desc">Realizada con Wordpress. Web institucional para alquiler de canchas de todo tipo estadounidense.</div>
-                    <div class="project-tags">Wordpress</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Balon</h3>
+                        <p class="project-desc">Realizada con Wordpress. Web institucional para alquiler de canchas de todo tipo estadounidense.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span></div>
                 </div>
+
+                <!-- Card 14 -->
                 <div class="project-card" onclick="window.open('https://ironplanning.com.ar','_blank')">
-                    <div class="project-title">Iron Planning</div>
-                    <div class="project-desc">Realizada con Wordpress y WooCommerce. Ecommerce y web institucional para la venta de parrillas.</div>
-                    <div class="project-tags">Wordpress, WooCommerce</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">Iron Planning</h3>
+                        <p class="project-desc">Realizada con Wordpress y WooCommerce. Ecommerce y web institucional para la venta de parrillas.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>WooCommerce</span></div>
                 </div>
+
+                <!-- Card 15 -->
                 <div class="project-card" onclick="window.open('https://icdpinstituto.org','_blank')">
-                    <div class="project-title">ICDP</div>
-                    <div class="project-desc">Realizada con Wordpress (Divi), PHP, HTML, CSS y JavaScript personalizado. Incluye plugin especial para afiliados y test vocacional con JavaScript y HTML. Web institucional y ecommerce para venta de cursos y gestión de afiliados.</div>
-                    <div class="project-tags">Wordpress, Divi, PHP, HTML, CSS, JavaScript</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                        </div>
+                        <h3 class="project-title">ICDP</h3>
+                        <p class="project-desc">Realizada con Wordpress (Divi), PHP, HTML, CSS y JavaScript personalizado. Incluye plugin especial para afiliados y test vocacional con JavaScript y HTML. Web institucional y ecommerce para venta de cursos y gestión de afiliados.</p>
+                    </div>
+                    <div class="project-tags"><span>Wordpress</span>, <span>Divi</span>, <span>PHP</span>, <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span></div>
                 </div>
+
+                <!-- Card 16 -->
                 <div class="project-card">
-                    <div class="project-title">Sistema Inteligente para Veterinaria</div>
-                    <div class="project-desc">Sistema de gestión veterinaria con automatización de WhatsApp e Inteligencia Artificial. Los clientes solicitan turnos mediante WhatsApp, la IA recopila la información necesaria, agenda automáticamente la cita en el sistema y envía confirmaciones y recordatorios al cliente.</div>
-                    <div class="project-tags">Python, IA, WhatsApp API, Automatización</div>
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <span class="hero-badge" style="font-size: 0.65rem; margin-bottom: 0;">AI Automation</span>
+                        </div>
+                        <h3 class="project-title">Sistema Inteligente para Veterinaria</h3>
+                        <p class="project-desc">Sistema de gestión veterinaria con automatización de WhatsApp e Inteligencia Artificial. Los clientes solicitan turnos mediante WhatsApp, la IA recopila la información necesaria, agenda automáticamente la cita en el sistema y envía confirmaciones y recordatorios al cliente.</p>
+                    </div>
+                    <div class="project-tags"><span>Python</span>, <span>IA</span>, <span>WhatsApp API</span>, <span>Automatización</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Projects (Personales) Section -->
+        <section id="proyectos" class="animate-in">
+            <div class="section-header">
+                <span class="section-tag">// Código y Repositorios</span>
+                <h2 class="section-title" id="projects-title">Proyectos</h2>
+                <p class="section-desc" id="projects-desc">Estos son todos los proyectos personales realizados por mí. Haz clic en cada uno para visitar el repositorio.</p>
+            </div>
+            
+            <div class="grid-cards" id="personal-projects-list">
+                
+                <!-- Card 17 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Sistema-Peluqeuria','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">Sistema de peluquería</h3>
+                        <p class="project-desc">Sistema realizado con Python y Django para agendar turnos y verlos en un calendario. Con registro histórico por cliente.</p>
+                    </div>
+                    <div class="project-tags"><span>Django</span>, <span>Python</span></div>
+                </div>
+
+                <!-- Card 18 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Alquil.Ar','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">Alquil.ar</h3>
+                        <p class="project-desc">Proyecto para la materia Ingeniería de Software 2, realizado con Django. Ecommerce de alquileres de maquinarias para construcción.</p>
+                    </div>
+                    <div class="project-tags"><span>Django</span>, <span>Python</span></div>
+                </div>
+
+                <!-- Card 19 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/To-do-list-con-python','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">Todo list en Python</h3>
+                        <p class="project-desc">Aplicación para gestionar tareas realizada en Python.</p>
+                    </div>
+                    <div class="project-tags"><span>Python</span></div>
+                </div>
+
+                <!-- Card 20 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Primera-app-celu','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">App básica para celular</h3>
+                        <p class="project-desc">Aplicación básica para celular realizada con Flutter.</p>
+                    </div>
+                    <div class="project-tags"><span>Flutter</span>, <span>Dart</span></div>
+                </div>
+
+                <!-- Card 21 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/bot','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">Bot de WhatsApp</h3>
+                        <p class="project-desc">Bot hecho con Twilio que, según la entrada de mensaje, devuelve un listado con propiedades que cumplen con lo pedido.</p>
+                    </div>
+                    <div class="project-tags"><span>Python</span>, <span>Twilio API</span></div>
+                </div>
+
+                <!-- Card 22 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/ruby','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">Ecommerce en Ruby on Rails</h3>
+                        <p class="project-desc">Ecommerce realizado con Ruby on Rails. Permite agregar productos, categorías, usuarios y pedidos. También tiene un sistema de autenticación y autorización.</p>
+                    </div>
+                    <div class="project-tags"><span>Ruby on Rails</span>, <span>Ruby</span></div>
+                </div>
+
+                <!-- Card 23 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Trabajo-final-proyecto-de-software','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">Trabajo final de Proyecto de Software</h3>
+                        <p class="project-desc">Realizado con flask y vue. Consta de dos partes, parte publica y privada, ambas son una web pero la parte publica fue realizada en vue y la privada en flask, la parte publica llama a los endpoints creados en la parte privada para mostrar informacion</p>
+                    </div>
+                    <div class="project-tags"><span>Flask</span>, <span>Vue.js</span>, <span>Python</span>, <span>JavaScript</span></div>
+                </div>
+
+                <!-- Card 24 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreDrop','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">LibreDrop</h3>
+                        <p class="project-desc">Plataforma web para compartir y descargar archivos de forma sencilla. Permite la gestión de archivos, carga y descarga de contenido, y una experiencia intuitiva para los usuarios.</p>
+                    </div>
+                    <div class="project-tags"><span>Python</span>, <span>Django</span>, <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span></div>
+                </div>
+
+                <!-- Card 25 -->
+                <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreShelves','_blank')">
+                    <div class="card-top">
+                        <div class="card-header-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="external-link-icon"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </div>
+                        <h3 class="project-title">LibreShelves</h3>
+                        <p class="project-desc">Sistema de gestión y organización de libros. Permite catalogar ejemplares, gestionar préstamos y administrar bibliotecas de forma eficiente.</p>
+                    </div>
+                    <div class="project-tags"><span>Python</span>, <span>Django</span>, <span>HTML</span>, <span>CSS</span>, <span>JavaScript</span></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- New Premium Contact CTA Section -->
+        <section id="contacto" class="animate-in">
+            <div class="contact-section">
+                <h3 class="contact-title" id="contact-cta-title">¿Tienes un proyecto en mente?</h3>
+                <p class="contact-text" id="contact-cta-desc">Estoy abierto a oportunidades laborales, proyectos freelance y colaboraciones en desarrollo de software.</p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/valentin-ezequiel-nu%C3%B1ez-8009a726b" target="_blank" class="btn-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/></svg>
+                        Conectar en LinkedIn
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="proyectos" style="margin-top: 3rem;">
-            <h2 id="projects-title">Proyectos</h2>
-            <p id="projects-desc">Estos son todos los proyectos realizados por mí. Haz clic en cada uno para visitar la página.</p>
-            
-            <div id="personal-projects-list" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem;">
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Sistema-Peluqeuria','_blank')">
-                    <div class="project-title">Sistema de peluquería</div>
-                    <div class="project-desc">Sistema realizado con Python y Django para agendar turnos y verlos en un calendario. Con registro histórico por cliente.</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Alquil.Ar','_blank')">
-                    <div class="project-title">Alquil.ar</div>
-                    <div class="project-desc">Proyecto para la materia Ingeniería de Software 2, realizado con Django. Ecommerce de alquileres de maquinarias para construcción.</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/To-do-list-con-python','_blank')">
-                    <div class="project-title">Todo list en Python</div>
-                    <div class="project-desc">Aplicación para gestionar tareas realizada en Python.</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Primera-app-celu','_blank')">
-                    <div class="project-title">App básica para celular</div>
-                    <div class="project-desc">Aplicación básica para celular realizada con Flutter.</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/bot','_blank')">
-                    <div class="project-title">Bot de WhatsApp</div>
-                    <div class="project-desc">Bot hecho con Twilio que, según la entrada de mensaje, devuelve un listado con propiedades que cumplen con lo pedido.</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/ruby','_blank')">
-                    <div class="project-title">Ecommerce en Ruby on Rails</div>
-                    <div class="project-desc">Ecommerce realizado con Ruby on Rails. Permite agregar productos, categorías, usuarios y pedidos. También tiene un sistema de autenticación y autorización.</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/Trabajo-final-proyecto-de-software','_blank')">
-                    <div class="project-title">Trabajo final de Proyecto de Software</div>
-                    <div class="project-desc">Realizado con flask y vue. Consta de dos partes, parte publica y privada, ambas son una web pero la parte publica fue realizada en vue y la privada en flask, la parte publica llama a los endpoints creados en la parte privada para mostrar informacion</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreDrop','_blank')">
-                    <div class="project-title">LibreDrop</div>
-                    <div class="project-desc">Plataforma web para compartir y descargar archivos de forma sencilla. Permite la gestión de archivos, carga y descarga de contenido, y una experiencia intuitiva para los usuarios.</div>
-                    <div class="project-tags">Python, Django, HTML, CSS, JavaScript</div>
-                </div>
-                <div class="project-card" onclick="window.open('https://github.com/nunezValen/LibreShelves','_blank')">
-                    <div class="project-title">LibreShelves</div>
-                    <div class="project-desc">Sistema de gestión y organización de libros. Permite catalogar ejemplares, gestionar préstamos y administrar bibliotecas de forma eficiente.</div>
-                    <div class="project-tags">Python, Django, HTML, CSS, JavaScript</div>
-                </div>
-            </div>
-        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p id="footer-text">© 2025 Valentin. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-menu">
+                <a href="#about" class="footer-link">Sobre mí</a>
+                <a href="#trabajos" class="footer-link">Trabajos</a>
+                <a href="#proyectos" class="footer-link">Proyectos</a>
+            </div>
+            <p id="footer-text">© 2025 Valentin. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
     <script>
-    // Scroll a las secciones
+    // Toggle Mobile Menu
+    const navToggle = document.getElementById('nav-toggle');
+    const navContainer = document.getElementById('nav-container');
+
+    if (navToggle && navContainer) {
+        navToggle.onclick = function() {
+            navToggle.classList.toggle('active');
+            navContainer.classList.toggle('active');
+        };
+    }
+
+    function closeMobileMenu() {
+        if (navToggle && navContainer) {
+            navToggle.classList.remove('active');
+            navContainer.classList.remove('active');
+        }
+    }
+
+    // Header scrolled state handling
+    window.onscroll = function() {
+        const nav = document.getElementById('navbar');
+        if (window.scrollY > 40) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    };
+
+    // Smooth Scroll Navigation Actions
     document.getElementById('btn-trabajos').onclick = function() {
         document.getElementById('trabajos').scrollIntoView({ behavior: 'smooth' });
     };
@@ -186,17 +532,28 @@
         document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Ir a la página de CV
-    document.getElementById('btn-cv').onclick = function() {
-        window.location.href = 'cv.html';
+    document.getElementById('btn-trabajos-nav').onclick = function() {
+        closeMobileMenu();
+        document.getElementById('trabajos').scrollIntoView({ behavior: 'smooth' });
     };
     
-    // Ir a LinkedIn
-    document.getElementById('btn-linkedin').onclick = function() {
-        window.open('https://www.linkedin.com/in/valentin-ezequiel-nuñez-8009a726b', '_blank');
+    document.getElementById('btn-proyectos-nav').onclick = function() {
+        closeMobileMenu();
+        document.getElementById('proyectos').scrollIntoView({ behavior: 'smooth' });
     };
 
-    // Traducciones unificadas (incluyendo todos los trabajos y proyectos en orden)
+    document.getElementById('btn-about-nav').onclick = function() {
+        closeMobileMenu();
+        document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    };
+
+    // CV Redirect
+    document.getElementById('btn-cv').onclick = function() {
+        closeMobileMenu();
+        window.location.href = 'cv.html';
+    };
+
+    // Unified Translations Dictionary (matches original structure)
     const translations = {
         es: {
             mainTitle: 'Hola, soy Valentin',
@@ -210,6 +567,11 @@
             btnProyectos: 'Ver proyectos',
             btnCV: 'Ver CV',
             footerText: '© 2025 Valentin. Todos los derechos reservados.',
+            contactTitle: '¿Tienes un proyecto en mente?',
+            contactDesc: 'Estoy abierto a oportunidades laborales, proyectos freelance y colaboraciones en desarrollo de software.',
+            navAbout: 'Sobre mí',
+            navWorks: 'Trabajos',
+            navProjects: 'Proyectos',
             allCards: [
                 // Trabajos
                 {title: 'Checkprop', desc: 'Realizada en Wordpress. Web institucional para empresa de inmuebles.'},
@@ -252,6 +614,11 @@
             btnProyectos: 'See projects',
             btnCV: 'See CV',
             footerText: '© 2025 Valentin. All rights reserved.',
+            contactTitle: 'Have a project in mind?',
+            contactDesc: 'I am open to job opportunities, freelance projects, and software development collaborations.',
+            navAbout: 'About me',
+            navWorks: 'Works',
+            navProjects: 'Projects',
             allCards: [
                 // Works
                 {title: 'Checkprop', desc: 'Made in Wordpress. Institutional website for a real estate company.'},
@@ -285,7 +652,6 @@
     };
 
     function updateProjects(lang) {
-        // Seleccionamos absolutamente todas las tarjetas en la página
         const cards = document.querySelectorAll('.project-card');
         const data = translations[lang].allCards;
         
@@ -315,6 +681,13 @@
         document.getElementById('btn-cv').textContent = translations[lang].btnCV;
         document.getElementById('footer-text').textContent = translations[lang].footerText;
         
+        document.getElementById('contact-cta-title').textContent = translations[lang].contactTitle;
+        document.getElementById('contact-cta-desc').textContent = translations[lang].contactDesc;
+        
+        document.getElementById('btn-about-nav').textContent = translations[lang].navAbout;
+        document.getElementById('btn-trabajos-nav').textContent = translations[lang].navWorks;
+        document.getElementById('btn-proyectos-nav').textContent = translations[lang].navProjects;
+
         document.documentElement.lang = lang;
         updateProjects(lang);
     }
@@ -323,10 +696,10 @@
         applyLanguage(e.target.value);
     };
 
-    // Carga inicial del idioma
+    // Initial language load
     applyLanguage('es');
 
-    // Filtrado de proyectos en la sección "Trabajos"
+    // Portfolio technology tag filter implementation
     const filterBtns = document.querySelectorAll('.filter-btn');
     filterBtns.forEach(btn => {
         btn.onclick = function() {

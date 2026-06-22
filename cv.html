@@ -3,29 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currículum Vitae de Valentín Nuñez - Estudiante de Informática y Desarrollador.">
     <title>CV - Valentin</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-    <header>
-        <h1 id="cv-title">Currículum Vitae</h1>
-        <nav>
-            <a href="index.html" id="back-home">Volver al inicio</a>
-            <select id="language-switch-cv">
-                <option value="es">Español</option>
-                <option value="en">English</option>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar scrolled">
+        <a href="index.html" class="nav-logo">Valentin</a>
+        <div class="nav-menu">
+            <a href="index.html" class="nav-link" id="back-home">Volver al inicio</a>
+        </div>
+        <div class="nav-actions">
+            <select id="language-switch-cv" class="lang-switch">
+                <option value="es">ES</option>
+                <option value="en">EN</option>
             </select>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <p id="cv-desc">Puedes ver o descargar mi CV aquí:</p>
-            <iframe src="cv.pdf" width="100%" height="600px" style="border:1px solid #ccc;"></iframe>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <main style="margin-top: 7rem;">
+        <section class="animate-in">
+            <div class="section-header">
+                <span class="section-tag">// Currículum</span>
+                <h1 class="section-title" id="cv-title">Currículum Vitae</h1>
+                <p class="section-desc" id="cv-desc">Puedes ver o descargar mi CV aquí:</p>
+            </div>
+            
+            <div class="cv-viewer-container">
+                <iframe src="cv.pdf" width="100%" height="800px" style="border: none;"></iframe>
+            </div>
         </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p id="footer-text-cv">© 2025 Valentin. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <p id="footer-text-cv">© 2025 Valentin. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
     <script>
     const translationsCV = {
         es: {
@@ -41,6 +60,7 @@
             footerText: '© 2025 Valentin. All rights reserved.'
         }
     };
+    
     document.getElementById('language-switch-cv').onchange = function(e) {
         const lang = e.target.value;
         document.getElementById('cv-title').textContent = translationsCV[lang].cvTitle;
